@@ -4,3 +4,8 @@ function changeRandomColor() {
     document.body.style.backgroundColor = colors[colorIndex];
     
 }
+
+
+function makePink() {
+    document.body.style.backgroundColor = 'pink';
+}
