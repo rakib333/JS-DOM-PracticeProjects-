@@ -9,3 +9,8 @@ function changeRandomColor() {
 function makePink() {
     document.body.style.backgroundColor = 'pink';
 }
+
+
+document.getElementById('make-blue').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'blue';
+})

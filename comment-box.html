@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment by JS</title>
+</head>
+<body>
+    <header>
+        <h1>This is a comment adding  page</h1>
+    </header>
+
+    <main id="comment-main">
+        <div>
+            <h2>Comment 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum commodi qui, assumenda rem, perspiciatis facilis aperiam mollitia pariatur asperiores, dolor maxime ut voluptate sunt quaerat laudantium cumque culpa eveniet deleniti perferendis alias optio. Non labore facilis at exercitationem pariatur, officia saepe iste inventore ullam incidunt blanditiis similique corrupti reiciendis aliquid?</p>
+        </div>
+        <div>
+            <h2>Comment 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum commodi qui, assumenda rem, perspiciatis facilis aperiam mollitia pariatur asperiores, dolor maxime ut voluptate sunt quaerat laudantium cumque culpa eveniet deleniti perferendis alias optio. Non labore facilis at exercitationem pariatur, officia saepe iste inventore ullam incidunt blanditiis similique corrupti reiciendis aliquid?</p>
+        </div>
+        <div>
+            <h2>Comment 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum commodi qui, assumenda rem, perspiciatis facilis aperiam mollitia pariatur asperiores, dolor maxime ut voluptate sunt quaerat laudantium cumque culpa eveniet deleniti perferendis alias optio. Non labore facilis at exercitationem pariatur, officia saepe iste inventore ullam incidunt blanditiis similique corrupti reiciendis aliquid?</p>
+        </div>
+
+        <div>
+            <div id="comment-main"></div>
+            <div>
+                <textarea  id="comment" cols="30" rows="10"></textarea>
+                <button id="new-comment">Add comment</button>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        document.getElementById('new-comment').addEventListener('click', function(){
+            
+            const comment = document.getElementById('comment');
+            const newComment = comment.value;
+            
+            const setComment = document.getElementById('comment-main');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            setComment.appendChild(p);
+
+            comment.value = '';
+
+        })
+    </script>
+</body>
+</html>

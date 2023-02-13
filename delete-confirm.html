@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete button</title>
+</head>
+<body>
+    <h2 id="delete-text">This text should be deleted</h2>
+    <input type="text" placeholder="type delete" id="delete-input">
+    <button id="delete-btn" disabled>Delete</button>
+
+
+
+    <script>
+
+        // confirmation
+        document.getElementById('delete-input').addEventListener('keyup', function(event){
+            const getInputValue = event.target.value;
+            const enableBtn = document.getElementById('delete-btn');
+            if(getInputValue === 'delete'){
+                enableBtn.removeAttribute('disabled');
+            }
+            else{
+                enableBtn.setAttribute('disabled', true)
+            }
+        })
+
+
+        // delete button 
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            const hide = document.getElementById('delete-text');
+            hide.style.display = 'none';
+        })
+    </script>
+</body>
+</html>
